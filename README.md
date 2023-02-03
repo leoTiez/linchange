@@ -15,7 +15,7 @@ python3 -m pip install requirements.txt
 ## Usage
 Run
 ```commandline
-python3 linchange.py [data_paths] --bed=file.bed [-n name1 -n name2]  --title=Title
+python3 linchange.py [data_paths] --annotation=path/to/bed/or/gtf [-n name1 -n name2]  --title=Title --distinguish_strand --percentile=100 --save_fig --save_path=path/to/saved/figure.png
 ```
 
 with
@@ -25,5 +25,9 @@ are added together (e.g. + strand and - strand of WT and mutant).
 - `-n`: that are printed on the plots axes. The first names is used for the x-axis, whilst
 the second name is used for the y-axis.
 - `--title` or `-t`: plot title. 
+- `--distinguish_strand`: if set, two consecutive strands are considered as + and - (in that order)
+- `--percentile`: Only keep the lower percentile.
+- `--save_fig`: If set, figure is set to file at save_path
+- `--save_path`: Figures is saved under this file name if save_fig is set.
 
 
